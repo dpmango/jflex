@@ -19,6 +19,12 @@
     <!--build:js js/main.min.js-->
     <script src="js/00_jquery.min.js"></script>
     <script src="js/00_device.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/maskform.js"></script>
+    <script src="js/mediaqueries.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/hoverflow.js"></script>
     <script src="js/jflex.js"></script>
     <script src="js/jbox.js"></script>
     <script src="custom/js/custom.js"></script>
@@ -26,11 +32,40 @@
 <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
 <![endif]-->
   </head>
-  <body id="major"><img class="pixel-perfect opacity20" src="/design.jpeg">
+  <body id="major">
+    <div id="pixelPerfectHolder"><img class="pixel-perfect opacity20" src="/design.jpeg"><img class="pixel-perfect w1200 opacity30" src="/960_grid_12_col.png"></div><a class="pixel-perfect-toggler bg_dark-orange circle t_white" href="#"></a>
     <div class="fullpage hold">
-      <header class="pad-h headinfo">
+      <header class="pad">
         <div class="row">
-          <div class="col w3"><a class="header-logo bg-to contain w100 h70 mt20" href="#"></a></div>
+          <div class="col w3"><a class="header-logo bg-to contain w100 h70" href="#"></a></div>
+          <div class="col w5">
+            <div class="social social--rounded mt20 center">
+              <div class="center inlb mr15"><a class="icon circle pt5 bg_blue" href="#"><img src="img/sm_facebook.png" width="30px" height="30px"></a></div>
+              <div class="center inlb mr15"><a class="icon circle pt5 bg_blue" href="#"><img src="img/sm_instagram.png" width="30px" height="30px"></a></div>
+              <div class="center inlb mr15"><a class="icon circle pt5 bg_blue" href="#"><img src="img/sm_twitter.png" width="30px" height="30px"></a></div>
+              <div class="center inlb mr15"><a class="icon circle pt5 bg_blue" href="#"><img src="img/sm_vk.png" width="30px" height="30px"></a></div>
+              <div class="center inlb mr15"><a class="icon circle pt5 bg_red" href="#"><img src="img/sm_youtube.png" width="30px" height="30px"></a></div>
+            </div>
+          </div>
+          <div class="col w4">
+            <div class="globalsearch mt20" id="globalsearch">
+              <div class="block-search" id="block-search-form">
+                <!-- .block-title тренинг заработок в интернете-->
+                <div class="content">
+                  <form action="" id="search-block-form">
+                    <div class="container-inline">
+                      <div class="form-item form-type-textfield form-item-search-block-form">
+                        <input class="brd b s_dark-grey h40 lh40 form-text form-autocomplete ui-autocomplete-processed ui-autocomplete-input" placeholder="тренинг заработок в интернете" title="Введите ключевые слова для поиска." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" data-sa-theme="minimal" autocomplete="off">
+                      </div>
+                      <div class="form-actions form-wrapper" id="edit-actions--10">
+                        <input class="form-submit btn transparent" type="submit" id="edit-submit--2" name="op" value="">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
     </div>

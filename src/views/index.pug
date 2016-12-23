@@ -21,6 +21,12 @@ html
     //build:js js/main.min.js
     script(src="js/00_jquery.min.js")
     script(src="js/00_device.js")
+    script(src="js/cookie.js")
+    script(src="js/maskform.js")
+    script(src="js/mediaqueries.js")
+    script(src="js/modules.js")
+    script(src="js/mobile.js")
+    script(src="js/hoverflow.js")
     script(src="js/jflex.js")
     script(src="js/jbox.js")
     script(src="custom/js/custom.js")
@@ -31,10 +37,40 @@ html
 
 
   body#major
-    img(src="/design.jpeg").pixel-perfect.opacity20
-    img(src="/960_grid_12_col.png").pixel-perfect.opacity10
+    #pixelPerfectHolder
+      img(src="/design.jpeg").pixel-perfect.opacity20
+      img(src="/960_grid_12_col.png").pixel-perfect.w1200.opacity30
+    a(href='#').pixel-perfect-toggler.bg_dark-orange.circle.t_white
     .fullpage.hold
-      header.pad-h.headinfo
+      header.pad
         .row
           .col.w3
-            a(href="#").header-logo.bg-to.contain.w100.h70.mt20
+            a(href="#").header-logo.bg-to.contain.w100.h70
+          .col.w5
+            .social.social--rounded.mt20.center
+              .center.inlb.mr15
+                a(href="#").icon.circle.pt5.bg_blue
+                  img(src="img/sm_facebook.png" width="30px" height="30px")
+              .center.inlb.mr15
+                a(href="#").icon.circle.pt5.bg_blue
+                  img(src="img/sm_instagram.png" width="30px" height="30px")
+              .center.inlb.mr15
+                a(href="#").icon.circle.pt5.bg_blue
+                  img(src="img/sm_twitter.png" width="30px" height="30px")
+              .center.inlb.mr15
+                a(href="#").icon.circle.pt5.bg_blue
+                  img(src="img/sm_vk.png" width="30px" height="30px")
+              .center.inlb.mr15
+                a(href="#").icon.circle.pt5.bg_red
+                  img(src="img/sm_youtube.png" width="30px" height="30px")
+          .col.w4
+            .globalsearch.mt20#globalsearch
+              .block-search#block-search-form
+                // .block-title тренинг заработок в интернете
+                .content
+                  form(action="")#search-block-form
+                    .container-inline
+                      .form-item.form-type-textfield.form-item-search-block-form
+                        input.brd.b.s_dark-grey.h40.lh40.form-text.form-autocomplete.ui-autocomplete-processed.ui-autocomplete-input(placeholder="тренинг заработок в интернете" title="Введите ключевые слова для поиска." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" data-sa-theme="minimal" autocomplete="off")
+                      .form-actions.form-wrapper#edit-actions--10
+                        input.form-submit.btn.transparent(type="submit" id="edit-submit--2" name="op" value="")

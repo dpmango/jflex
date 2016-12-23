@@ -1,11 +1,45 @@
+
 .pixel-perfect
   position: absolute 0 0 0 0
   content: ' '
   z-index: 1000
 
+.pixel-perfect-toggler
+  position: fixed
+  left: 0
+  top: 0
+  text-decoration: none
+  padding: 10px
+  z-index: 1001
+
+.w1200
+  width: 1280px
+  left: -30px
 
 // header
 
 .header-logo
   background-image: url('../custom/img/logo.png')
   display: block
+
+// custom components
+
+.lh40
+  line-height: 40px !important
+
+// overrides
+.form-actions::before
+  font-size: 18px !important
+  top: 0
+
+.globalsearch input[type="text"]
+  border-radius: 0 !important
+
+.btn, input[type="submit"]
+  &.transparent
+    background: transparent !important
+    box-shadow: none !important
+
+.social.social--rounded
+  .icon.circle
+    border-radius: 50% !important
