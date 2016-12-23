@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    // MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>
+    // With jFlex of course :)
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title Site name
+
+    //build:css css/style.min.css
+    link(rel="stylesheet" href="css/ckeditor.css" type="text/css")
+    link(rel="stylesheet" href="css/jflex.css" type="text/css")
+    link(rel="stylesheet" href="css/modules.css" type="text/css")
+    link(rel="stylesheet" href="css/adaptive.css" type="text/css")
+    link(rel="stylesheet" href="fonts/gothampro/font.css" type="text/css")
+    link(rel="stylesheet" href="fonts/gothampro/style.css" type="text/css")
+    link(rel="stylesheet" href="fonts/icons/font.css" type="text/css")
+    link(rel="stylesheet" href="css/style.css" type="text/css")
+    //endbuild
+
+    //build:js js/main.min.js
+    script(src="js/00_jquery.min.js")
+    script(src="js/00_device.js")
+    script(src="js/jflex.js")
+    script(src="js/jbox.js")
+    script(src="custom/js/custom.js")
+    //endbuild
+    <!--[if lt IE 9]>
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+
+  body#major
+    img(src="/design.jpeg").pixel-perfect.opacity20
+    img(src="/960_grid_12_col.png").pixel-perfect.opacity10
+    .fullpage.hold
+      header.pad-h.headinfo
+        .row
+          .col.w3
+            a(href="#").header-logo.bg-to.contain.w100.h70.mt20

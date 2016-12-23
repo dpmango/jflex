@@ -1,0 +1,16 @@
+/* template custom css */
+
+body#major .hold {/* max-width:1000px; */ min-width:960px;}
+
+
+
+
+/* #block-views-modes-modes, .view-filters {display:none;} */
+
+/* href styles */
+
+a {color:#444;}
+a:hover {color:#777;}
+
+.custom .logo {background-image:url('../img/logo.png'); width:200px; height:50px;}
+.custom .headinfo .col {height:50px;}
