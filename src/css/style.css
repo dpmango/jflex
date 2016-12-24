@@ -33,10 +33,18 @@
 /* icons */
 .icon {
   display: inline-block;
+  text-transform: none;
+  font-weight: 400;
   font-style: normal;
+  font-variant: normal;
   font-size: 1em;
   font-family: 'icons';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-skype::before {
   color: #12A5F4;
   content: '\E7E7';
@@ -45,7 +53,9 @@
 .icon-tag::before {
   content: '\E652';
 }
-
+.icon-calendar::before {
+  content: '\E61F';
+}
 /* custom components - RC */
 
 .h230, .h230 .col {
@@ -55,6 +65,9 @@
   margin-top: -20px;
 }
 
+.pt0 {
+  padding-top: 0px;
+}
 /*text */
 .upp {
   text-transform: uppercase;
@@ -63,6 +76,9 @@
   font-family: 'gothamprobold';
 }
 
+.lh15em {
+  line-height: 1.5em;
+}
 .lh40 {
   line-height: 40px !important;
 }
