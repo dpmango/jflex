@@ -22,10 +22,75 @@
   background-image: url('../custom/img/logo.png')
   display: block
 
-// custom components
+// icons
+.icon
+  font-family: 'icons'
+  display: inline-block
+  font-size: 1em
+  font-style: normal
+.icon-skype::before
+  content: '\E7E7'
+  cursor: pointer
+  color: #12A5F4
+.icon-tag::before
+  content: '\E652'
+
+// custom components - RC
+
+.h230,
+.h230 .col
+  height: 230px !important
+.mt-20
+  margin-top: -20px
+
+//text
+.upp
+  text-transform: uppercase
+.bold
+  font-family: 'gothamprobold'
 
 .lh40
   line-height: 40px !important
+
+.fz90
+  font-size: 90% !important
+.fz120
+  font-size: 120% !important
+
+//buttons
+.trans
+  transition: all .4s ease-in-out
+
+.btn.simple.s_red
+  color: #c60c30 !important
+  &:hover
+    color: white !important
+    .icon
+      color: white !important
+.btn.simple.t_white
+  color: white !important
+
+
+.btn.inlb
+  display: inline-block !important
+
+.brd.s_red
+  border-color: #c60c30
+
+.btn-icon
+  position: relative
+  &-left
+    vertical-align: top
+    .icon
+      position: absolute
+      top: -3px
+      left: 0
+
+.btn.ph40
+  padding-left: 40px !important
+  padding-right: 40px !important
+  &.btn-icon-left
+    padding-right: 20px !important
 
 // overrides
 .form-actions::before
@@ -43,3 +108,6 @@
 .social.social--rounded
   .icon.circle
     border-radius: 50% !important
+
+a.active.t_red
+  color: #d81f44 !important

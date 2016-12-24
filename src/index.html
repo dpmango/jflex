@@ -25,6 +25,8 @@
     <script src="js/modules.js"></script>
     <script src="js/mobile.js"></script>
     <script src="js/hoverflow.js"></script>
+    <script src="js/jquery.swipe.min.js"></script>
+    <script src="js/jslider.js"></script>
     <script src="js/jflex.js"></script>
     <script src="js/jbox.js"></script>
     <script src="custom/js/custom.js"></script>
@@ -35,9 +37,9 @@
   <body id="major">
     <div id="pixelPerfectHolder"><img class="pixel-perfect opacity20" src="/design.jpeg"><img class="pixel-perfect w1200 opacity30" src="/960_grid_12_col.png"></div><a class="pixel-perfect-toggler bg_dark-orange circle t_white" href="#"></a>
     <div class="fullpage hold">
-      <header class="pad">
+      <header class="pad mb20">
         <div class="row">
-          <div class="col w3"><a class="header-logo bg-to contain w100 h70" href="#"></a></div>
+          <div class="col w3 mt-20"><a class="header-logo bg-to contain w100 h100" href="#"></a></div>
           <div class="col w5">
             <div class="social social--rounded mt20 center">
               <div class="center inlb mr15"><a class="icon circle pt5 bg_blue" href="#"><img src="img/sm_facebook.png" width="30px" height="30px"></a></div>
@@ -67,7 +69,38 @@
             </div>
           </div>
         </div>
+        <div class="row mt20">
+          <div class="col w3 right pr20 mt10"><a class="t_dark-grey" href="#"><i class="icon icon-skype biggest mr10 middle"></i><span>Связаться с нами</span></a></div>
+          <div class="col w5 center"><a class="btn centrify inlb simple brd s_red upp btn-icon btn-icon-left ph40 big trans" href="#"><i class="icon icon-tag bigger t_red"></i><span class="smaller">Партнерская программа</span></a></div>
+          <div class="col w4">
+            <div class="menu inline fz90 hide-title mt15">
+              <ul class="menu t_grey">
+                <li class="leaf"><a class="active t_red" href="#">Главная</a></li>
+                <li class="leaf"><a href="#">О нас</a></li>
+                <li class="leaf"><a href="#">Новости</a></li>
+                <li class="leaf"><a href="#">Отзывы</a></li>
+                <li class="leaf"><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </header>
+      <!-- slider-->
+      <div class="row mt0">
+        <div class="page-slideshow table h230 dark jslider slidex nopaginator clr" data-slider-effect="slidex" data-slider-speed="5000">
+          <div class="slider-content h230">
+            <div class="slide bg-to bg-center bg-top cover" style="background-image: url('custom/img/slider-bg.png')">
+              <div class="row middle">
+                <div class="col w1"></div>
+                <div class="col w6">
+                  <div class="upp fz120 bold t_white">Добро пожаловать на сайт клуба бизнес-инвесторов</div>
+                </div>
+                <div class="col w3"><a class="btn simple t_white big" href="#">Подбробнее</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
