@@ -37,34 +37,35 @@ html
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
 
-
   body#major
-    #pixelPerfectHolder
-      img(src="design.jpeg").pixel-perfect.opacity20
-      // img(src="960_grid_12_col.png").pixel-perfect.w1200.opacity30
-    a(href='#').pixel-perfect-toggler.bg_dark-orange.circle.t_white
     .fullpage.hold
       header.pad.mb20
         .row
           .col.w3.mt-20
-            a(href="#").header-logo.bg-to.contain.w100.h100
-          .col.w5
-            .social.social--rounded.mt20.center
-              .center.inlb.mr15
-                a(href="#").icon.circle.pt5.bg_blue
-                  img(src="img/sm_facebook.png" width="30px" height="30px")
-              .center.inlb.mr15
-                a(href="#").icon.circle.pt5.bg_blue
-                  img(src="img/sm_instagram.png" width="30px" height="30px")
-              .center.inlb.mr15
-                a(href="#").icon.circle.pt5.bg_blue
-                  img(src="img/sm_twitter.png" width="30px" height="30px")
-              .center.inlb.mr15
-                a(href="#").icon.circle.pt5.bg_blue
-                  img(src="img/sm_vk.png" width="30px" height="30px")
-              .center.inlb.mr15
-                a(href="#").icon.circle.pt5.bg_red
-                  img(src="img/sm_youtube.png" width="30px" height="30px")
+            a.no-dec(href="#").header-logo.bg-to.contain.w100.h100
+          .col.w5.center.mt20.pt5
+            a.no-dec.mr10(href="#")
+              .socials.fb
+            a.no-dec.mr10(href="#")
+              .socials.ins
+            a.no-dec.mr10(href="#")
+              .socials.tw
+            a.no-dec.mr10(href="#")
+              .socials.vk
+            a.no-dec.mr10(href="#")
+              .socials.yt
+            //- .center.inlb.mr15
+            //-   a(href="#").icon.circle.pt5.bg_blue
+            //-     img(src="img/sm_instagram.png" width="30px" height="30px")
+            //- .center.inlb.mr15
+            //-   a(href="#").icon.circle.pt5.bg_blue
+            //-     img(src="img/sm_twitter.png" width="30px" height="30px")
+            //- .center.inlb.mr15
+            //-   a(href="#").icon.circle.pt5.bg_blue
+            //-     img(src="img/sm_vk.png" width="30px" height="30px")
+            //- .center.inlb.mr15
+            //-   a(href="#").icon.circle.pt5.bg_red
+            //-     img(src="img/sm_youtube.png" width="30px" height="30px")
           .col.w4
             .globalsearch.mt20#globalsearch
               .block-search#block-search-form
@@ -112,13 +113,20 @@ html
                   a.btn.simple.t_white.big(href="#") Подбробнее
 
       // slider menu
-      .row.mt-20
-        .col.w6
-          .menu.main.expanded
-            li
-              a(href="#") Школа инвестора
-        .col.w6
-
+      .row.mt-50
+        .col.w1
+        .col.w5
+          .dmenu.upp.bold.big.center.t_black
+            a(href="#") Школа инвестора
+            .dmenu-hidden
+              a(href="#") Тренинги
+              a(href="#") Вебинары
+        .col.w5
+          .dmenu.upp.bold.big.center.t_black
+            a(href="#") Школа youtube
+            .dmenu-hidden
+              a(href="#") Тренинги
+              a(href="#") Вебинары
       // about text
       .row.pad.pt60.pb50
         .col.w1
@@ -161,4 +169,219 @@ html
             i.icon.icon-calendar.biggest.mr10.middle
             span Смотреть календарь мероприятий
 
-      // events
+      // events-heading
+      .row.pad.pb10.mt20.center
+        .bg.bg-to.contain.bg-center.h70(style="background-image: url('custom/img/block_separtor.png')")
+        .big.upp.bold Предстоящие мероприятия
+      //item
+      .row.pad
+        .col.w4.mt80.over.bg-to.cover.h230.no-col-h(style="background-image: url('custom/img/event.png')")
+          img.abs.r-20.t-20(src="custom/img/tag_dollar.png")
+          .bg_grey.overflow.opacity80.mh20.pv10.ph20.center.mt150.r-t-5
+            .row.t_dark-grey.bold.small до начала мероприятия осталось:
+            .row.t_black.pt5
+              .col.w3 3
+              .col.w3 22
+              .col.w3 58
+              .col.w3 15
+            .row.t_blue.pt5
+              .col.w3 дней
+              .col.w3 часов
+              .col.w3 минут
+              .col.w3 секунд
+        .col.w1
+        .col.w7
+          .right
+            .bg-to.bg-right.contain.h70.over(style="background-image: url('custom/img/label_time-left.png')")
+              span.t_prim.abs.top.r100.w70p.bold.smaller.center.pt10 Осталось мест
+              span.t_prim.abs.bottom.r100.w70p.big.center.pb5 11
+          .t_red.bigger.bold Тренинг «Школа Инвестора»
+          .pt20 Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30
+            i.icon.icon-calendar.big.t_red.middle.mr10
+            span.bold 29 Ноября 2016
+          .pt10
+            i.icon.icon-timer.big.t_red.middle.mr10
+            span.bold 1 день (8 часов)
+          .pt10
+            i.icon.icon-location.big.t_red.middle.mr10
+            span.bold ул. Красная Пресня д.17
+          .right
+            a.btn.inlb.simple.brd.s_red.bold.trans.mr20(href="#")
+              span.big Записаться
+            a.btn.inlb.simple.brd.s_red.bold.trans(href="#")
+              span.big Подробнее
+
+      //section separator
+      .row.mt40.bg.bg-to.contain.bg-center.h25(style="background-image: url('custom/img/section_separator_gray.png')")
+
+      //item
+      .row.pad.mt30
+        .col.w4.mt80.over.bg-to.cover.h230.no-col-h(style="background-image: url('custom/img/event.png')")
+          img.abs.r-20.t-20(src="custom/img/tag_free.png")
+          .bg_grey.overflow.opacity80.mh20.pv10.ph20.center.mt150.r-t-5
+            .row.t_dark-grey.bold.small до начала мероприятия осталось:
+            .row.t_black.pt5
+              .col.w3 3
+              .col.w3 22
+              .col.w3 58
+              .col.w3 15
+            .row.t_blue.pt5
+              .col.w3 дней
+              .col.w3 часов
+              .col.w3 минут
+              .col.w3 секунд
+        .col.w1
+        .col.w7
+          .right
+            .bg-to.bg-right.contain.h70.over(style="background-image: url('custom/img/label_time-left.png')")
+              span.t_prim.abs.top.r100.w70p.bold.smaller.center.pt10 Осталось мест
+              span.t_prim.abs.bottom.r100.w70p.big.center.pb5 3
+          .t_red.bigger.bold Вебинар «Школа Инвестора»
+          .pt20 Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30
+            i.icon.icon-calendar.big.t_red.middle.mr10
+            span.bold 29 Ноября 2016
+          .pt10
+            i.icon.icon-timer.big.t_red.middle.mr10
+            span.bold 1 день (8 часов)
+          .pt10
+            i.icon.icon-location.big.t_red.middle.mr10
+            span.bold ул. Красная Пресня д.17
+          .right
+            a.btn.inlb.simple.brd.s_red.bold.trans.mr20(href="#")
+              span.big Записаться
+            a.btn.inlb.simple.brd.s_red.bold.trans(href="#")
+              span.big Подробнее
+
+      //section separator
+      .row.mt40.bg.bg-to.contain.bg-center.h25(style="background-image: url('custom/img/section_separator_gray.png')")
+
+      // events-heading
+      .row.pad.mt60.center
+        .bg.bg-to.contain.bg-center.h70(style="background-image: url('custom/img/block_separtor.png')")
+        .big.upp.bold последние прошедшие мероприятия
+      //item
+      .row.pad
+        .col.w4.mt80.over.bg-to.cover.h230.no-col-h.opacity50(style="background-image: url('custom/img/event.png')")
+          img.abs.r-20.t-20(src="custom/img/tag_free-gray.png")
+          img.abs.center50(src="custom/img/event-end-overlay.png")
+          .bg_grey.overflow.mh20.pv10.ph20.center.mt190.r-t-5
+            .row.t_dark-grey.fz120 мероприятие завершилось
+        .col.w1
+        .col.w7
+          .right
+            .bg-to.bg-right.contain.h70.over(style="background-image: url('custom/img/label_time-left-big.png')")
+              span.t_prim.abs.top.r95.w70p.bold.smallest.center.pt10 Количество участников
+              span.t_prim.abs.bottom.r95.w70p.fz120.center.pb10.bold 1118
+          .t_dark-grey.bigger.bold Вебинар «Школа Инвестора»
+          .pt20 Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30
+            i.icon.icon-calendar.big.t_dark-grey.middle.mr10
+            span.bold 29 Ноября 2016
+          .pt10
+            i.icon.icon-timer.big.t_dark-grey.middle.mr10
+            span.bold 1 день (8 часов)
+          .pt10
+            i.icon.icon-location.big.t_dark-grey.middle.mr10
+            span.bold ул. Красная Пресня д.17
+          .right
+            a.btn.inlb.simple.brd.s_blue.bold.trans.mr20(href="#")
+              span.big Фотоотчет
+            a.btn.inlb.simple.brd.s_blue.bold.trans(href="#")
+              span.big Отзывы
+
+      //section separator
+      .row.mt40.bg.bg-to.contain.bg-center.h25(style="background-image: url('custom/img/section_separator_gray.png')")
+
+      // events-heading
+      .row.pad.mt80.center
+        .bg.bg-to.contain.bg-center.h70(style="background-image: url('custom/img/block_separtor.png')")
+        .big.upp.bold Коротко о нас
+      .row.ph50.pw20.mt30
+        // ideas
+        .col.w4.pad
+          .t_red.bold.big Идея Проекта
+          .t_blue.bold.fz120.mt40 ProfitoMania <br> Клуб успешных тнветоров
+          p.t_dark-grey.small.mt20 Основная идея, которая нами двигала, движет и будет двигать - передать наши опыт, знания и навыки молодым и начинающим инвесторам. Помочь им осознавать по-другому жизнь, почувствовать свободу и достичь финансовой независимости. Мы уверены, что каждый из нас может и способен быть успешным и счастливым, получать максимальное удовольствие от жизни
+          p.t_dark-grey.small Основная идея, которая нами двигала, движет и будет двигать - передать наши опыт, знания и навыки молодым и начинающим инвесторам.
+          a.t_red(href="#") Подробнее
+        // founders
+        .col.w4.pad
+          .t_red.bold.big Основатели клуба
+          .row.mt50
+            .col.w4
+              img(src="custom/img/avatar.png")
+            .col.w8
+              .t_blue.bold.pt10 Вячеслав Курбатов
+              a.inlb.pt10(href="#")
+                i.icon.icon-youtube.t_red.bigger.middle.mr5
+                span.t_red.small YouTube канал
+            .col.w12.mt10.small
+              .t_dark-grey.bold сооснователь Клуба Бизнес Инвесторов, сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года.
+              a.inlb.t_red.pt10(href="#") Подробнее
+          .row.mt50
+            .col.w4
+              img(src="custom/img/avatar.png")
+            .col.w8
+              .t_blue.bold.pt10 Вячеслав Курбатов
+              a.inlb.pt10(href="#")
+                i.icon.icon-youtube.t_red.bigger.middle.mr5
+                span.t_red.small YouTube канал
+            .col.w12.mt10.small
+              .t_dark-grey.bold сооснователь Клуба Бизнес Инвесторов, сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года.
+              a.inlb.t_red.pt10(href="#") Подробнее
+        // testimonails
+        .col.w4.pad
+          .t_red.bold.big Последние отзывы
+          .t_blue.bold.mt30 Ольга Ступина 23 года <br> г. Ступино
+          .mt10.small
+            p Инвzсторов.сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года...
+            a.inlb.t_red(href="#") Подробнее
+          //item
+          .t_blue.bold.mt30 Ольга Ступина 23 года <br> г. Ступино
+          .mt10.small
+            p Инвzсторов.сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года...
+            a.inlb.t_red(href="#") Подробнее
+          //item
+          .t_blue.bold.mt30 Ольга Ступина 23 года <br> г. Ступино
+          .mt10.small
+            p Инвzсторов.сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года...
+            a.inlb.t_red(href="#") Подробнее
+
+      //section separator
+      .row.mt100.bg.bg-to.contain.bg-center.h30(style="background-image: url('custom/img/section_separator.png')")
+
+      footer.row.bg.bg-to.cover.bg-center.mt80(style="background-image: url('custom/img/slider-bg.png')")
+        .col.w5
+        .col.w7.mt100.mb70
+          .row
+            .fl
+              a.no-dec(href="#")
+                .payments.qiwi
+              a.no-dec(href="#")
+                .payments.webmoney
+              a.no-dec(href="#")
+                .payments.yandex
+              a.no-dec(href="#")
+                .payments.svaznoy
+              a.no-dec(href="#")
+                .payments.visa
+              a.no-dec(href="#")
+                .payments.mastercard
+            .fr
+              a.no-dec.mr10(href="#")
+                .socials.fb
+              a.no-dec.mr10(href="#")
+                .socials.ins
+              a.no-dec.mr10(href="#")
+                .socials.tw
+              a.no-dec.mr10(href="#")
+                .socials.vk
+              a.no-dec.mr10(href="#")
+                .socials.yt
+          .row.mt30
+            .col.w12
+              a(href="#").t_white
+                img.middle.mr10(src="custom/img/skype.png")
+                span Связаться с нами
