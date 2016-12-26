@@ -1,336 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
-    <!-- With jFlex of course :)-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Site name</title>
-    <!--build:css css/style.min.css-->
-    <link rel="stylesheet" href="css/ckeditor.css" type="text/css">
-    <link rel="stylesheet" href="css/jflex.css" type="text/css">
-    <link rel="stylesheet" href="css/modules.css" type="text/css">
-    <link rel="stylesheet" href="css/adaptive.css" type="text/css">
-    <link rel="stylesheet" href="fonts/gothampro/font.css" type="text/css">
-    <link rel="stylesheet" href="fonts/gothampro/style.css" type="text/css">
-    <link rel="stylesheet" href="fonts/icons/font.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <!--endbuild-->
-    <!--build:js js/main.min.js-->
-    <script src="js/00_jquery.min.js"></script>
-    <script src="js/00_device.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/maskform.js"></script>
-    <script src="js/mediaqueries.js"></script>
-    <script src="js/modules.js"></script>
-    <script src="js/mobile.js"></script>
-    <script src="js/hoverflow.js"></script>
-    <script src="js/jquery.swipe.min.js"></script>
-    <script src="js/jslider.js"></script>
-    <script src="js/jflex.js"></script>
-    <script src="js/jbox.js"></script>
-    <script src="custom/js/custom.js"></script>
-    <!--endbuild--><!--[if lt IE 9]>
-<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-<![endif]-->
+    <title>ProfitoMania</title>
+    <style>
+    *{padding: 0;  margin: 0; box-sizing: border-box;}
+    body{
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 16px;
+      color: rgba(0,0,0,.7);
+      min-height: 100vh;
+      height: auto;
+      background-color: #f8f8f8;
+      overflow-x: hidden;
+    }
+    a{color: inherit; text-decoration: none;}
+    h1{
+      margin: 5vh 3vw 0 3vw;
+      color: rgba(0,0,0,.7);
+      border-bottom: 2px solid rgba(0,0,0,.2);
+      display: block;
+    }
+    .links{
+       background-color: white;
+       border:  2px solid rgba(0,0,0,.2);
+       border-radius: 10px;
+       margin: 5vh 3vw;
+       padding: 5vh 3vw;
+       width: 45vw;
+       float: left;
+      }
+    /*@media(max-width: 1000px){
+      .links{
+        width: 70vw;
+      }
+    }*/
+    @media(max-width: 700px){
+      .links{
+        width: 94vw;
+      }
+    }
+    ul{list-style: none;}
+    a{
+      display: inline-block;
+      padding: 1vh 0vw 1vh 2vw;
+      width: 95%;
+      border-left: 4px solid transparent;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+    a:hover{
+      border-left: 4px solid #26b690;
+      background: rgba(0,0,0,.1);
+      border-bottom: 1px solid rgba(0,0,0,.4);
+    }
+    h2{
+      margin-bottom: 3vh;
+    }
+    </style>
   </head>
-  <body id="major">
-    <div class="fullpage hold">
-      <header class="pad mb20">
-        <div class="row">
-          <div class="col w3 mt-20"><a class="no-dec header-logo bg-to contain w100 h100" href="#"></a></div>
-          <div class="col w5 center mt20 pt5"><a class="no-dec mr10" href="#">
-              <div class="socials fb"></div></a><a class="no-dec mr10" href="#">
-              <div class="socials ins"></div></a><a class="no-dec mr10" href="#">
-              <div class="socials tw"></div></a><a class="no-dec mr10" href="#">
-              <div class="socials vk"></div></a><a class="no-dec mr10" href="#">
-              <div class="socials yt"></div></a></div>
-          <div class="col w4">
-            <div class="globalsearch mt20" id="globalsearch">
-              <div class="block-search" id="block-search-form">
-                <!-- .block-title тренинг заработок в интернете-->
-                <div class="content">
-                  <form action="" id="search-block-form">
-                    <div class="container-inline">
-                      <div class="form-item form-type-textfield form-item-search-block-form">
-                        <input class="brd b s_dark-grey h40 lh40 form-text form-autocomplete ui-autocomplete-processed ui-autocomplete-input" placeholder="тренинг заработок в интернете" title="Введите ключевые слова для поиска." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" data-sa-theme="minimal" autocomplete="off">
-                      </div>
-                      <div class="form-actions form-wrapper" id="edit-actions--10">
-                        <input class="form-submit btn transparent" type="submit" id="edit-submit--2" name="op" value="">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt20">
-          <div class="col w3 right pr20 mt10"><a class="t_dark-grey" href="#"><i class="icon icon-skype biggest mr10 middle"></i><span>Связаться с нами</span></a></div>
-          <div class="col w5 center"><a class="btn centrify inlb simple brd s_red upp btn-icon btn-icon-left ph40 big trans" href="#"><i class="icon icon-tag bigger t_red"></i><span class="smaller">Партнерская программа</span></a></div>
-          <div class="col w4">
-            <div class="menu inline fz90 hide-title mt15">
-              <ul class="menu t_grey">
-                <li class="leaf"><a class="active t_red" href="#">Главная</a></li>
-                <li class="leaf"><a href="#">О нас</a></li>
-                <li class="leaf"><a href="#">Новости</a></li>
-                <li class="leaf"><a href="#">Отзывы</a></li>
-                <li class="leaf"><a href="#">Контакты</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- slider-->
-      <div class="row mt0">
-        <div class="page-slideshow table h230 dark jslider slidex nopaginator clr" data-slider-effect="slidex" data-slider-speed="5000">
-          <div class="slider-content h230">
-            <div class="slide bg-to bg-center bg-top cover" style="background-image: url('custom/img/slider-bg.png')">
-              <div class="row middle">
-                <div class="col w1"></div>
-                <div class="col w6">
-                  <div class="upp fz120 bold t_white">Добро пожаловать на сайт клуба бизнес-инвесторов</div>
-                </div>
-                <div class="col w3"><a class="btn simple t_white big" href="#">Подбробнее</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- slider menu-->
-      <div class="row mt-50">
-        <div class="col w1"></div>
-        <div class="col w5">
-          <div class="dmenu upp bold big center t_black"><a href="#">Школа инвестора</a>
-            <div class="dmenu-hidden"><a href="#">Тренинги</a><a href="#">Вебинары</a></div>
-          </div>
-        </div>
-        <div class="col w5">
-          <div class="dmenu upp bold big center t_black"><a href="#">Школа youtube</a>
-            <div class="dmenu-hidden"><a href="#">Тренинги</a><a href="#">Вебинары</a></div>
-          </div>
-        </div>
-      </div>
-      <!-- about text-->
-      <div class="row pad pt60 pb50">
-        <div class="col w1"></div>
-        <div class="col w1"><img src="custom/img/about_person.png"></div>
-        <div class="col w3">
-          <p class="lh15em fz120"><span class="t_red">ProfitoMania</span>  - это сообщество людей, чьи интересы объединяет успешное инвестирование капитала.</p>
-        </div>
-        <div class="col w6 brd l s_red pl20 ml20 small t_dark-grey">
-          <p>
-            Многие мечтают о пассивном заработке. Мы знаем, что действительно работает. <br>
-            Мы делимся приобретенными знаниями  со всеми желающими в формате тренгов и вебинаров.
-          </p>
-          <p>
-            Почувствуй и ты вкус новой жизни, вступив в клуб успежных инвесторов.
-            Будь в курсе всех событий.
-          </p>
-        </div>
-      </div>
-      <!-- benefits-->
-      <div class="row pad pt0">
-        <div class="col w12">
-          <div class="bold center fz120">Клуб открывает для своих участников следующие возможности:</div>
-        </div>
-      </div>
-      <div class="row pad pb15 t_grey small bold">
-        <div class="col w1"></div>
-        <div class="col w1 center"><img src="custom/img/benefit_checkmark.png"></div>
-        <div class="col w4 pt5">Пройти обучение лучшим практикам в Школах Инвестора и Школе YouTube</div>
-        <div class="col w1 center"><img src="custom/img/benefit_checkmark.png"></div>
-        <div class="col w4 pt5">Получать все актуальную информацию о трендах и популярных инвестиционных проектах</div>
-      </div>
-      <div class="row pad pb15 t_grey small bold">
-        <div class="col w1"></div>
-        <div class="col w1 center"><img src="custom/img/benefit_checkmark.png"></div>
-        <div class="col w4 pt5">Быть в курсе всех тенденций в сфере инвестиций и заработка в интернете</div>
-        <div class="col w1 center"><img src="custom/img/benefit_checkmark.png"></div>
-        <div class="col w4 pt5">Стать успешным инфо-бизнесменом и обрести финансовую свободу и независимость</div>
-      </div>
-      <div class="row mt40">
-        <div class="col w11 right"><a class="t_red small bold" href="#"><i class="icon icon-calendar biggest mr10 middle"></i><span>Смотреть календарь мероприятий</span></a></div>
-      </div>
-      <!-- events-heading-->
-      <div class="row pad pb10 mt20 center">
-        <div class="bg bg-to contain bg-center h70" style="background-image: url('custom/img/block_separtor.png')"></div>
-        <div class="big upp bold">Предстоящие мероприятия</div>
-      </div>
-      <!--item-->
-      <div class="row pad">
-        <div class="col w4 mt80 over bg-to cover h230 no-col-h" style="background-image: url('custom/img/event.png')"><img class="abs r-20 t-20" src="custom/img/tag_dollar.png">
-          <div class="bg_grey overflow opacity80 mh20 pv10 ph20 center mt150 r-t-5">
-            <div class="row t_dark-grey bold small">до начала мероприятия осталось:</div>
-            <div class="row t_black pt5">
-              <div class="col w3">3</div>
-              <div class="col w3">22</div>
-              <div class="col w3">58</div>
-              <div class="col w3">15</div>
-            </div>
-            <div class="row t_blue pt5">
-              <div class="col w3">дней</div>
-              <div class="col w3">часов</div>
-              <div class="col w3">минут</div>
-              <div class="col w3">секунд</div>
-            </div>
-          </div>
-        </div>
-        <div class="col w1"></div>
-        <div class="col w7">
-          <div class="right">
-            <div class="bg-to bg-right contain h70 over" style="background-image: url('custom/img/label_time-left.png')"><span class="t_prim abs top r100 w70p bold smaller center pt10">Осталось мест</span><span class="t_prim abs bottom r100 w70p big center pb5">11</span></div>
-          </div>
-          <div class="t_red bigger bold">Тренинг «Школа Инвестора»</div>
-          <div class="pt20">Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.</div>
-          <div class="pt30"><i class="icon icon-calendar big t_red middle mr10"></i><span class="bold">29 Ноября 2016</span></div>
-          <div class="pt10"><i class="icon icon-timer big t_red middle mr10"></i><span class="bold">1 день (8 часов)</span></div>
-          <div class="pt10"><i class="icon icon-location big t_red middle mr10"></i><span class="bold">ул. Красная Пресня д.17</span></div>
-          <div class="right"><a class="btn inlb simple brd s_red bold trans mr20" href="#"><span class="big">Записаться</span></a><a class="btn inlb simple brd s_red bold trans" href="#"><span class="big">Подробнее</span></a></div>
-        </div>
-      </div>
-      <!--section separator-->
-      <div class="row mt40 bg bg-to contain bg-center h25" style="background-image: url('custom/img/section_separator_gray.png')"></div>
-      <!--item-->
-      <div class="row pad mt30">
-        <div class="col w4 mt80 over bg-to cover h230 no-col-h" style="background-image: url('custom/img/event.png')"><img class="abs r-20 t-20" src="custom/img/tag_free.png">
-          <div class="bg_grey overflow opacity80 mh20 pv10 ph20 center mt150 r-t-5">
-            <div class="row t_dark-grey bold small">до начала мероприятия осталось:</div>
-            <div class="row t_black pt5">
-              <div class="col w3">3</div>
-              <div class="col w3">22</div>
-              <div class="col w3">58</div>
-              <div class="col w3">15</div>
-            </div>
-            <div class="row t_blue pt5">
-              <div class="col w3">дней</div>
-              <div class="col w3">часов</div>
-              <div class="col w3">минут</div>
-              <div class="col w3">секунд</div>
-            </div>
-          </div>
-        </div>
-        <div class="col w1"></div>
-        <div class="col w7">
-          <div class="right">
-            <div class="bg-to bg-right contain h70 over" style="background-image: url('custom/img/label_time-left.png')"><span class="t_prim abs top r100 w70p bold smaller center pt10">Осталось мест</span><span class="t_prim abs bottom r100 w70p big center pb5">3</span></div>
-          </div>
-          <div class="t_red bigger bold">Вебинар «Школа Инвестора»</div>
-          <div class="pt20">Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.</div>
-          <div class="pt30"><i class="icon icon-calendar big t_red middle mr10"></i><span class="bold">29 Ноября 2016</span></div>
-          <div class="pt10"><i class="icon icon-timer big t_red middle mr10"></i><span class="bold">1 день (8 часов)</span></div>
-          <div class="pt10"><i class="icon icon-location big t_red middle mr10"></i><span class="bold">ул. Красная Пресня д.17</span></div>
-          <div class="right"><a class="btn inlb simple brd s_red bold trans mr20" href="#"><span class="big">Записаться</span></a><a class="btn inlb simple brd s_red bold trans" href="#"><span class="big">Подробнее</span></a></div>
-        </div>
-      </div>
-      <!--section separator-->
-      <div class="row mt40 bg bg-to contain bg-center h25" style="background-image: url('custom/img/section_separator_gray.png')"></div>
-      <!-- events-heading-->
-      <div class="row pad mt60 center">
-        <div class="bg bg-to contain bg-center h70" style="background-image: url('custom/img/block_separtor.png')"></div>
-        <div class="big upp bold">последние прошедшие мероприятия</div>
-      </div>
-      <!--item-->
-      <div class="row pad">
-        <div class="col w4 mt80 over bg-to cover h230 no-col-h opacity50" style="background-image: url('custom/img/event.png')"><img class="abs r-20 t-20" src="custom/img/tag_free-gray.png"><img class="abs center50" src="custom/img/event-end-overlay.png">
-          <div class="bg_grey overflow mh20 pv10 ph20 center mt190 r-t-5">
-            <div class="row t_dark-grey fz120">мероприятие завершилось</div>
-          </div>
-        </div>
-        <div class="col w1"></div>
-        <div class="col w7">
-          <div class="right">
-            <div class="bg-to bg-right contain h70 over" style="background-image: url('custom/img/label_time-left-big.png')"><span class="t_prim abs top r95 w70p bold smallest center pt10">Количество участников</span><span class="t_prim abs bottom r95 w70p fz120 center pb10 bold">1118</span></div>
-          </div>
-          <div class="t_dark-grey bigger bold">Вебинар «Школа Инвестора»</div>
-          <div class="pt20">Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.</div>
-          <div class="pt30"><i class="icon icon-calendar big t_dark-grey middle mr10"></i><span class="bold">29 Ноября 2016</span></div>
-          <div class="pt10"><i class="icon icon-timer big t_dark-grey middle mr10"></i><span class="bold">1 день (8 часов)</span></div>
-          <div class="pt10"><i class="icon icon-location big t_dark-grey middle mr10"></i><span class="bold">ул. Красная Пресня д.17</span></div>
-          <div class="right"><a class="btn inlb simple brd s_blue bold trans mr20" href="#"><span class="big">Фотоотчет</span></a><a class="btn inlb simple brd s_blue bold trans" href="#"><span class="big">Отзывы</span></a></div>
-        </div>
-      </div>
-      <!--section separator-->
-      <div class="row mt40 bg bg-to contain bg-center h25" style="background-image: url('custom/img/section_separator_gray.png')"></div>
-      <!-- events-heading-->
-      <div class="row pad mt80 center">
-        <div class="bg bg-to contain bg-center h70" style="background-image: url('custom/img/block_separtor.png')"></div>
-        <div class="big upp bold">Коротко о нас</div>
-      </div>
-      <div class="row ph50 pw20 mt30">
-        <!-- ideas-->
-        <div class="col w4 pad">
-          <div class="t_red bold big">Идея Проекта</div>
-          <div class="t_blue bold fz120 mt40">ProfitoMania <br> Клуб успешных тнветоров</div>
-          <p class="t_dark-grey small mt20">Основная идея, которая нами двигала, движет и будет двигать - передать наши опыт, знания и навыки молодым и начинающим инвесторам. Помочь им осознавать по-другому жизнь, почувствовать свободу и достичь финансовой независимости. Мы уверены, что каждый из нас может и способен быть успешным и счастливым, получать максимальное удовольствие от жизни</p>
-          <p class="t_dark-grey small">Основная идея, которая нами двигала, движет и будет двигать - передать наши опыт, знания и навыки молодым и начинающим инвесторам.</p><a class="t_red" href="#">Подробнее</a>
-        </div>
-        <!-- founders-->
-        <div class="col w4 pad">
-          <div class="t_red bold big">Основатели клуба</div>
-          <div class="row mt50">
-            <div class="col w4"><img src="custom/img/avatar.png"></div>
-            <div class="col w8">
-              <div class="t_blue bold pt10">Вячеслав Курбатов</div><a class="inlb pt10" href="#"><i class="icon icon-youtube t_red bigger middle mr5"></i><span class="t_red small">YouTube канал</span></a>
-            </div>
-            <div class="col w12 mt10 small">
-              <div class="t_dark-grey bold">сооснователь Клуба Бизнес Инвесторов, сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года.</div><a class="inlb t_red pt10" href="#">Подробнее</a>
-            </div>
-          </div>
-          <div class="row mt50">
-            <div class="col w4"><img src="custom/img/avatar.png"></div>
-            <div class="col w8">
-              <div class="t_blue bold pt10">Вячеслав Курбатов</div><a class="inlb pt10" href="#"><i class="icon icon-youtube t_red bigger middle mr5"></i><span class="t_red small">YouTube канал</span></a>
-            </div>
-            <div class="col w12 mt10 small">
-              <div class="t_dark-grey bold">сооснователь Клуба Бизнес Инвесторов, сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года.</div><a class="inlb t_red pt10" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <!-- testimonails-->
-        <div class="col w4 pad">
-          <div class="t_red bold big">Последние отзывы</div>
-          <div class="t_blue bold mt30">Ольга Ступина 23 года <br> г. Ступино</div>
-          <div class="mt10 small">
-            <p>Инвzсторов.сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года...</p><a class="inlb t_red" href="#">Подробнее</a>
-          </div>
-          <!--item-->
-          <div class="t_blue bold mt30">Ольга Ступина 23 года <br> г. Ступино</div>
-          <div class="mt10 small">
-            <p>Инвzсторов.сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года...</p><a class="inlb t_red" href="#">Подробнее</a>
-          </div>
-          <!--item-->
-          <div class="t_blue bold mt30">Ольга Ступина 23 года <br> г. Ступино</div>
-          <div class="mt10 small">
-            <p>Инвzсторов.сертифицированный тренер, инвестор, Опыт успешных инвестиций - 3 года...</p><a class="inlb t_red" href="#">Подробнее</a>
-          </div>
-        </div>
-      </div>
-      <!--section separator-->
-      <div class="row mt100 bg bg-to contain bg-center h30" style="background-image: url('custom/img/section_separator.png')"></div>
-      <footer class="row bg bg-to cover bg-center mt80" style="background-image: url('custom/img/slider-bg.png')">
-        <div class="col w5"></div>
-        <div class="col w7 mt100 mb70">
-          <div class="row">
-            <div class="fl"><a class="no-dec" href="#">
-                <div class="payments qiwi"></div></a><a class="no-dec" href="#">
-                <div class="payments webmoney"></div></a><a class="no-dec" href="#">
-                <div class="payments yandex"></div></a><a class="no-dec" href="#">
-                <div class="payments svaznoy"></div></a><a class="no-dec" href="#">
-                <div class="payments visa"></div></a><a class="no-dec" href="#">
-                <div class="payments mastercard"></div></a></div>
-            <div class="fr"><a class="no-dec mr10" href="#">
-                <div class="socials fb"></div></a><a class="no-dec mr10" href="#">
-                <div class="socials ins"></div></a><a class="no-dec mr10" href="#">
-                <div class="socials tw"></div></a><a class="no-dec mr10" href="#">
-                <div class="socials vk"></div></a><a class="no-dec mr10" href="#">
-                <div class="socials yt"></div></a></div>
-          </div>
-          <div class="row mt30">
-            <div class="col w12"><a class="t_white" href="#"><img class="middle mr10" src="custom/img/skype.png"><span>Связаться с нами</span></a></div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+
+<body>
+  <h1>ProfitoMania - Верстка </h1>
+  <div class="links">
+    <h2>Страницы</h2>
+    <ul class="">
+      <li><a href="mainpage.html" target="_blank">1. Главная</a></li>
+      <li><a href="event.html" target="_blank">2. Страница мероприятия</a></li>
+      <li><a href="event-past.html" target="_blank">3. Прошедшее мероприятие</a></li>
+
+    </ul>
+  </div>
+</body>
+
 </html>

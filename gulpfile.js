@@ -74,7 +74,7 @@ gulp.task('postcss', function() {
       .pipe( postcss(processors, { parser: sugarss }) )
       .pipe( sourcemaps.write('.') )
       .pipe(rename({ extname: '.css' }))
-      .pipe( gulp.dest('./src/css') )
+      .pipe( gulp.dest('./src/custom/css') )
       .pipe(browserSync.reload({
         stream: true
       }));

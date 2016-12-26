@@ -1,0 +1,292 @@
+doctype html
+html
+  head
+    // MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>
+    // With jFlex of course :)
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title Site name
+
+    //build:css css/style.min.css
+    link(rel="stylesheet" href="css/ckeditor.css" type="text/css")
+    link(rel="stylesheet" href="css/jflex.css" type="text/css")
+    link(rel="stylesheet" href="css/modules.css" type="text/css")
+    link(rel="stylesheet" href="css/adaptive.css" type="text/css")
+    link(rel="stylesheet" href="fonts/gothampro/font.css" type="text/css")
+    link(rel="stylesheet" href="fonts/gothampro/style.css" type="text/css")
+    link(rel="stylesheet" href="fonts/icons/font.css" type="text/css")
+    link(rel="stylesheet" href="custom/css/style.css" type="text/css")
+    //endbuild
+
+    //build:js js/main.min.js
+    script(src="js/00_jquery.min.js")
+    script(src="js/00_device.js")
+    script(src="js/cookie.js")
+    script(src="js/maskform.js")
+    script(src="js/mediaqueries.js")
+    script(src="js/modules.js")
+    script(src="js/mobile.js")
+    script(src="js/hoverflow.js")
+    script(src="js/jquery.swipe.min.js")
+    script(src="js/jslider.js")
+    script(src="js/jflex.js")
+    script(src="js/jbox.js")
+    script(src="custom/js/custom.js")
+    //endbuild
+    <!--[if lt IE 9]>
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+  body#major
+    .fullpage.hold
+      header.pad.mb20
+        .row
+          .col.w3.mt-20
+            a.no-dec(href="#").header-logo.bg-to.contain.w100.h100
+          .col.w5.center.mt20.pt5
+            a.no-dec.mr10(href="#")
+              .socials.fb
+            a.no-dec.mr10(href="#")
+              .socials.ins
+            a.no-dec.mr10(href="#")
+              .socials.tw
+            a.no-dec.mr10(href="#")
+              .socials.vk
+            a.no-dec.mr10(href="#")
+              .socials.yt
+          .col.w4
+            .globalsearch.mt20#globalsearch
+              .block-search#block-search-form
+                // .block-title тренинг заработок в интернете
+                .content
+                  form(action="")#search-block-form
+                    .container-inline
+                      .form-item.form-type-textfield.form-item-search-block-form
+                        input.brd.b.s_dark-grey.h40.lh40.form-text.form-autocomplete.ui-autocomplete-processed.ui-autocomplete-input(placeholder="тренинг заработок в интернете" title="Введите ключевые слова для поиска." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" data-sa-theme="minimal" autocomplete="off")
+                      .form-actions.form-wrapper#edit-actions--10
+                        input.form-submit.btn.transparent(type="submit" id="edit-submit--2" name="op" value="")
+        .row.mt20
+          .col.w3.right.pr20.mt10
+            a(href="#").t_dark-grey
+              i.icon.icon-skype.biggest.mr10.middle
+              span Связаться с нами
+          .col.w5.center
+            a.btn.centrify.inlb.simple.brd.s_red.upp.btn-icon.btn-icon-left.ph40.big.trans(href="#")
+              i.icon.icon-tag.bigger.t_red
+              span.smaller Партнерская программа
+          .col.w4
+            .menu.inline.fz90.hide-title.mt15
+              ul.menu.t_grey
+                li.leaf
+                  a.active.t_red(href="#") Главная
+                li.leaf
+                  a(href="#") О нас
+                li.leaf
+                  a(href="#") Новости
+                li.leaf
+                  a(href="#") Отзывы
+                li.leaf
+                  a(href="#") Контакты
+
+      // slider
+      .row.mt0
+        .page-slideshow.table.h230.dark.jslider.slidex.nopaginator.clr(data-slider-effect="slidex" data-slider-speed="5000")
+          .slider-content.h230
+            .slide.bg-to.bg-center.bg-top.cover(style="background-image: url('custom/img/slider-bg.png')")
+              .row.middle
+                .col.w1
+                .col.w6
+                  .upp.fz120.bold.t_white Добро пожаловать на сайт клуба бизнес-инвесторов
+                .col.w3
+                  a.btn.simple.t_white.big(href="#") Подбробнее
+
+      // slider menu
+      .row.mt-50
+        .col.w1
+        .col.w5
+          .dmenu.upp.bold.big.center.t_black
+            a(href="#") Школа инвестора
+            .dmenu-hidden
+              a(href="#") Тренинги
+              a(href="#") Вебинары
+        .col.w5
+          .dmenu.upp.bold.big.center.t_black
+            a(href="#") Школа youtube
+            .dmenu-hidden
+              a(href="#") Тренинги
+              a(href="#") Вебинары
+
+      // upcomming events
+      .row.pad.pt35.pb20.small
+        .col.w1
+        .col.w3
+          a.upp.t_dark-grey(href="#") Предстоящие мероприятия
+        .col.w3
+          a.upp.t_grey(href="#") Архив мероприятий
+      .row.mt20
+        .col.w11.right
+          a.t_red.small.bold(href="#")
+            i.icon.icon-calendar.biggest.mr10.middle
+            span Смотреть календарь мероприятий
+
+      // breadcrumbs
+      .row.mt20
+        .col.w1
+        .col.w10
+          .breadcrumb.t_red.smaller
+            .sep
+              a(href="#") школа инвесторов
+            .sep
+              a(href="#") предстоящие мероприятия
+            .sep.last
+              a(href="#") тренинг школа youtube
+
+      //event inner
+      .row.pad
+        .col.w4.mt80.over.bg-to.cover.h230.no-col-h(style="background-image: url('custom/img/event.png')")
+          img.abs.r-20.t-20(src="custom/img/tag_dollar.png")
+          .bg_grey.overflow.opacity80.mh20.pv10.ph20.center.mt150.r-t-5
+            .row.t_dark-grey.bold.small до начала мероприятия осталось:
+            .row.t_black.pt5
+              .col.w3 3
+              .col.w3 22
+              .col.w3 58
+              .col.w3 15
+            .row.t_blue.pt5
+              .col.w3 дней
+              .col.w3 часов
+              .col.w3 минут
+              .col.w3 секунд
+
+          .row
+            .col.w12.pad
+              .pt30
+                i.icon.icon-calendar.big.t_red.middle.mr10
+                span.bold 29 Ноября 2016
+              .pt10
+                i.icon.icon-timer.big.t_red.middle.mr10
+                span.bold 1 день (8 часов)
+              .pt10
+                i.icon.icon-location.big.t_red.middle.mr10
+                span.bold ул. Красная Пресня д.17
+
+          .row.brd.s_grey.pad.r5.mt30
+            .t_blue Стоимость участия в тренинге
+            .big.bold.mt10 1 день
+            .row.t_red.mt20.middle
+              .col.w4.bold.brd.s_red.r-5.p10.center 4000 <i class="icon rub small"></i>
+              .col.w8.pl20.smaller для первых 20 участников <br> цена еще доступна
+            .row.t_grey.middle.mt10
+              .col.w4.bold.brd.s_dark-grey.r-5.p10.center 5000 <i class="icon rub small"></i>
+              .col.w8.pl20.smaller.middle.pt10 для 20+ участников
+            //small
+            .big.bold.mt50 2 день
+            p.t_black.mt10 Скидка 20% + бонус <i class="icon icon-bonus t_red big middle ml5"></i>
+            .row.t_red.mt20.middle
+              .col.w10.bold.brd.s_red.r-5.p10.center.big
+                span.t_grey.strike.mr10 10 000 <i class="icon rub small"></i>
+                span 8 000 <i class="icon rub small"></i>
+
+            p.smallest.t_dark-grey.mt20 * В стоимость входит 2 кофе-брейк
+
+          .row.center.mt15
+            a(href="#").t_black.mr10 Способы оплаты
+            a(href="#").t_black Связаться с нами
+
+        .col.w1
+        .col.w7
+          .right
+            .bg-to.bg-right.contain.h70.over(style="background-image: url('custom/img/label_time-left.png')")
+              span.t_prim.abs.top.r100.w70p.bold.smaller.center.pt10 Осталось мест
+              span.t_prim.abs.bottom.r100.w70p.big.center.pb5 11
+          .t_red.bigger.bold Тренинг «Школа Инвестора»
+          .pt20.t_blue.big.bold День 1-ый
+          .pt20.bold Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30.fz120.bold Программа треннинга
+          ol.pt20
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+          .pt20.mt20.t_blue.big.bold День 2-ой
+          .pt20.bold Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30.fz120.bold Программа треннинга
+          ol.pt20
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+
+          .left.mt40
+            a.btn.inlb.simple.brd.s_red.bold.trans.mr20(href="#")
+              span.big Записаться
+
+      // dropdown
+      .row.mt60.pad
+        .col.w12.right
+          .mr30.inlb.pt10.middle.bold.small Заработай просто приглашения для своих партнеров
+          a.btn.centrify.inlb.simple.brd.s_red.upp.btn-icon.btn-icon-left.ph40.big.trans(href="#")
+            i.icon.icon-tag.bigger.t_red
+            span.smaller Партнерская программа
+
+      // benefits
+      .row.pad.center.mt70
+        .bigger.t_blue Бонусная программа для участников тренинга
+        .col.w1
+        .col.w10
+          p.small.pt15 Каждый участник, оплативший участие в 2х дневном треннинге (школа инвесторов + школа youtube) получает следующие бонусы
+      .row.mt30.ph60.mb50.center
+        .col.w4.biggest
+          i.icon.icon-calendar.t_red.biggest
+          .micro.ph30
+            .mt10.smallest <b>1 месяц бесплатных консультаций</b> в скайпе по развитию и продвижению
+        .col.w4.biggest
+          i.icon.icon-lock.t_red.biggest
+          .micro.ph30
+            .mt10.smallest <b>Доступ к закрытому скайп чату</b> лидеров клуба
+        .col.w4.biggest
+          i.icon.icon-ccard.t_red.biggest
+          .micro.ph30
+            .mt10.smallest <b>Скидку 50% </b> на любое последующее обучение
+
+      footer.row.bg.bg-to.cover.bg-center.mt80(style="background-image: url('custom/img/slider-bg.png')")
+        .col.w5
+        .col.w7.mt100.mb70
+          .row
+            .fl
+              a.no-dec(href="#")
+                .payments.qiwi
+              a.no-dec(href="#")
+                .payments.webmoney
+              a.no-dec(href="#")
+                .payments.yandex
+              a.no-dec(href="#")
+                .payments.svaznoy
+              a.no-dec(href="#")
+                .payments.visa
+              a.no-dec(href="#")
+                .payments.mastercard
+            .fr
+              a.no-dec.mr10(href="#")
+                .socials.fb
+              a.no-dec.mr10(href="#")
+                .socials.ins
+              a.no-dec.mr10(href="#")
+                .socials.tw
+              a.no-dec.mr10(href="#")
+                .socials.vk
+              a.no-dec.mr10(href="#")
+                .socials.yt
+          .row.mt30
+            .col.w12
+              a(href="#").t_white
+                img.middle.mr10(src="custom/img/skype.png")
+                span Связаться с нами

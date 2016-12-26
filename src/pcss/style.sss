@@ -1,5 +1,5 @@
 .header-logo
-  background-image: url('../custom/img/logo.png')
+  background-image: url('/custom/img/logo.png')
   display: block
 
 // custom components
@@ -25,7 +25,7 @@
   &:hover
     background: white
     &::before
-      content: '\E7DE'
+      content: '\E7DB'
       color: #c1c5c9
     .dmenu-hidden
       height: auto
@@ -39,8 +39,9 @@
   &-hidden
     background: white
     height: 0px
+    pointer-events: none
     opacity: 0
-    z-index: 9
+    z-index: 1
     position: absolute
     top: 50px
     left: 0
@@ -73,10 +74,18 @@
   content: '\E61B'
 .icon-youtube::before
   content: '\E606'
+.icon-bonus::before
+  content: '\E6A0'
+.icon-lock::before
+  content: '\E636'
+.icon-ccard::before
+  content: '\e903'
+.rub::before
+  content: '\e902'
 
 .socials
   display: inline-block
-  background-image: url('../custom/img/socials.png')
+  background-image: url('/custom/img/socials.png')
   background-repeat: no-repeat
   size: 35px
   cursor: pointer
@@ -95,7 +104,7 @@
     background-position: -202px 0
 .payments
   display: inline-block
-  background-image: url('../custom/img/payments.png')
+  background-image: url('/custom/img/payments.png')
   background-repeat: no-repeat
   width: 55px
   height: 35px
@@ -137,6 +146,9 @@
 .no-col-h
   .col
     height: auto !important
+
+.block
+  display: block
 
 .abs
   position: absolute
@@ -183,6 +195,8 @@
   text-transform: uppercase
 .bold
   font-family: 'gothamprobold'
+.strike
+  text-decoration: line-through
 a.no-dec
   text-decoration: none
 .lh15em
@@ -195,6 +209,63 @@ a.no-dec
 .fz120
   font-size: 120% !important
 
+
+// jBox theme
+.jbox-theme-over
+  img
+    display: inline-block
+    max-width: 100%
+    transition: all .5s ease
+  .jbox
+    position: relative
+    height: 100%
+    display: block
+    overflow: hidden
+    font-size: 0
+    &::before
+      position: absolute 0 0 0 0
+      width: 100%
+      height: 100%
+      background: black
+      display: block
+      content: ' '
+      opacity: 0
+      z-index: 3
+      transition: all .3s ease-in-out
+      transform: translate3d(50%, 50%, 0)
+    &::after
+      position: absolute
+      left: -30px
+      top: -30px
+      z-index: 4
+      transition: all .6s ease
+      font-size: 25px
+      content: '\E632'
+      display: block
+      font-family: 'icons'
+      color: white
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+    &:hover::before
+      opacity: .5
+      transform: translate3d(5%, 5%, 0)
+    &:hover::after
+      left: 45%
+      top: 45%
+    &:hover img
+      transform: scale(1.1)
+
+.comments-theme-dark
+  input, textarea
+    background: #e8e8e8
+    transition: background .3s ease
+    &:focus
+      background: white
 //buttons
 .trans
   transition: all .4s ease-in-out
@@ -256,3 +327,8 @@ a.no-dec
 
 a.active.t_red
   color: #d81f44 !important
+
+.breadcrumb.t_red .sep
+  color: #d81f44 !important
+  a
+    color: #d81f44 !important

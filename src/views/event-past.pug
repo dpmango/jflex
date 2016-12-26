@@ -1,0 +1,331 @@
+doctype html
+html
+  head
+    // MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>
+    // With jFlex of course :)
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title Site name
+
+    //build:css css/style.min.css
+    link(rel="stylesheet" href="css/ckeditor.css" type="text/css")
+    link(rel="stylesheet" href="css/jflex.css" type="text/css")
+    link(rel="stylesheet" href="css/modules.css" type="text/css")
+    link(rel="stylesheet" href="css/adaptive.css" type="text/css")
+    link(rel="stylesheet" href="fonts/gothampro/font.css" type="text/css")
+    link(rel="stylesheet" href="fonts/gothampro/style.css" type="text/css")
+    link(rel="stylesheet" href="fonts/icons/font.css" type="text/css")
+    link(rel="stylesheet" href="custom/css/style.css" type="text/css")
+    //endbuild
+
+    //build:js js/main.min.js
+    script(src="js/00_jquery.min.js")
+    script(src="js/00_device.js")
+    script(src="js/cookie.js")
+    script(src="js/maskform.js")
+    script(src="js/mediaqueries.js")
+    script(src="js/modules.js")
+    script(src="js/mobile.js")
+    script(src="js/hoverflow.js")
+    script(src="js/jquery.swipe.min.js")
+    script(src="js/jslider.js")
+    script(src="js/jflex.js")
+    script(src="js/jbox.js")
+    script(src="custom/js/custom.js")
+    //endbuild
+    <!--[if lt IE 9]>
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+  body#major
+    .fullpage.hold
+      header.pad.mb20
+        .row
+          .col.w3.mt-20
+            a.no-dec(href="#").header-logo.bg-to.contain.w100.h100
+          .col.w5.center.mt20.pt5
+            a.no-dec.mr10(href="#")
+              .socials.fb
+            a.no-dec.mr10(href="#")
+              .socials.ins
+            a.no-dec.mr10(href="#")
+              .socials.tw
+            a.no-dec.mr10(href="#")
+              .socials.vk
+            a.no-dec.mr10(href="#")
+              .socials.yt
+          .col.w4
+            .globalsearch.mt20#globalsearch
+              .block-search#block-search-form
+                // .block-title тренинг заработок в интернете
+                .content
+                  form(action="")#search-block-form
+                    .container-inline
+                      .form-item.form-type-textfield.form-item-search-block-form
+                        input.brd.b.s_dark-grey.h40.lh40.form-text.form-autocomplete.ui-autocomplete-processed.ui-autocomplete-input(placeholder="тренинг заработок в интернете" title="Введите ключевые слова для поиска." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" data-sa-theme="minimal" autocomplete="off")
+                      .form-actions.form-wrapper#edit-actions--10
+                        input.form-submit.btn.transparent(type="submit" id="edit-submit--2" name="op" value="")
+        .row.mt20
+          .col.w3.right.pr20.mt10
+            a(href="#").t_dark-grey
+              i.icon.icon-skype.biggest.mr10.middle
+              span Связаться с нами
+          .col.w5.center
+            a.btn.centrify.inlb.simple.brd.s_red.upp.btn-icon.btn-icon-left.ph40.big.trans(href="#")
+              i.icon.icon-tag.bigger.t_red
+              span.smaller Партнерская программа
+          .col.w4
+            .menu.inline.fz90.hide-title.mt15
+              ul.menu.t_grey
+                li.leaf
+                  a.active.t_red(href="#") Главная
+                li.leaf
+                  a(href="#") О нас
+                li.leaf
+                  a(href="#") Новости
+                li.leaf
+                  a(href="#") Отзывы
+                li.leaf
+                  a(href="#") Контакты
+
+      // slider
+      .row.mt0
+        .page-slideshow.table.h230.dark.jslider.slidex.nopaginator.clr(data-slider-effect="slidex" data-slider-speed="5000")
+          .slider-content.h230
+            .slide.bg-to.bg-center.bg-top.cover(style="background-image: url('custom/img/slider-bg.png')")
+              .row.middle
+                .col.w1
+                .col.w6
+                  .upp.fz120.bold.t_white Добро пожаловать на сайт клуба бизнес-инвесторов
+                .col.w3
+                  a.btn.simple.t_white.big(href="#") Подбробнее
+
+      // slider menu
+      .row.mt-50
+        .col.w1
+        .col.w5
+          .dmenu.upp.bold.big.center.t_black
+            a(href="#") Школа инвестора
+            .dmenu-hidden
+              a(href="#") Тренинги
+              a(href="#") Вебинары
+        .col.w5
+          .dmenu.upp.bold.big.center.t_black
+            a(href="#") Школа youtube
+            .dmenu-hidden
+              a(href="#") Тренинги
+              a(href="#") Вебинары
+
+      // upcomming events
+      .row.pad.pt35.pb20.small
+        .col.w1
+        .col.w3
+          a.upp.t_dark-grey(href="#") Предстоящие мероприятия
+        .col.w3
+          a.upp.t_grey(href="#") Архив мероприятий
+      .row.mt20
+        .col.w11.right
+          a.t_red.small.bold(href="#")
+            i.icon.icon-calendar.biggest.mr10.middle
+            span Смотреть календарь мероприятий
+
+      // breadcrumbs
+      .row.mt20
+        .col.w1
+        .col.w10
+          .breadcrumb.t_red.smaller
+            .sep
+              a(href="#") школа инвесторов
+            .sep
+              a(href="#") предстоящие мероприятия
+            .sep.last
+              a(href="#") тренинг школа youtube
+
+      //event inner
+      .row.pad
+        .col.w4.mt80.over.bg-to.cover.h230.no-col-h(style="background-image: url('custom/img/event.png')")
+          img.abs.r-20.t-20.opacity50(src="custom/img/tag_free-gray.png")
+          img.abs.center50.opacity50(src="custom/img/event-end-overlay.png")
+          .bg_grey.overflow.mh20.pv10.ph20.center.mt190.r-t-5
+            .row.t_dark-grey.fz120 мероприятие завершилось
+          .row
+            .col.w12.pad
+              .pt30
+                i.icon.icon-calendar.big.t_dark-grey.middle.mr10
+                span.bold 29 Ноября 2016
+              .pt10
+                i.icon.icon-timer.big.t_dark-grey.middle.mr10
+                span.bold 1 день (8 часов)
+              .pt10
+                i.icon.icon-location.big.t_dark-grey.middle.mr10
+                span.bold ул. Красная Пресня д.17
+        .col.w1
+        .col.w7
+          .right
+            .bg-to.bg-right.contain.h70.over(style="background-image: url('custom/img/label_time-left-big.png')")
+              span.t_prim.abs.top.r95.w70p.bold.smallest.center.pt10 Количество участников
+              span.t_prim.abs.bottom.r95.w70p.fz120.center.pb10.bold 1118
+          .t_dark-grey.bigger.bold Вебинар «Школа Инвестора»
+          .pt20 Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30.bold Цель Тренинга - научить участников основам правильного инвестирования, передать лучшие практики и опыт ведущих блогеров.
+          .pt30.fz120.bold Программа треннинга
+          ol.pt20
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+            li.mb10 это текст-"рыба", часто используемый в печати и вэб-дизайн
+
+      // photos
+      .row.mt50.center
+        .t_prim.bold.big Фотоотчет (29/11/2016)
+      .row.mt20.pad.jbox-theme-over
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_01.jpg" rel="jbox" data-gallery-index="0")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_01.jpg" rel="jbox" data-gallery-index="1")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_01.jpg" rel="jbox" data-gallery-index="2")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_01.jpg" rel="jbox" data-gallery-index="3")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_01.jpg" rel="jbox" data-gallery-index="4")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_01.jpg" rel="jbox" data-gallery-index="5")
+            img(src="tmp/example.jpg")
+      .row.pad.jbox-theme-over
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_02.jpg" rel="jbox" data-gallery-index="6")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_02.jpg" rel="jbox" data-gallery-index="7")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_02.jpg" rel="jbox" data-gallery-index="8")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_02.jpg" rel="jbox" data-gallery-index="9")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_02.jpg" rel="jbox" data-gallery-index="10")
+            img(src="tmp/example.jpg")
+        .col.w2.pr15
+          a.jbox.gallery-001(href="tmp/special_banner_02.jpg" rel="jbox" data-gallery-index="11")
+            img(src="tmp/example.jpg")
+      .row.center
+        a.inlb.btn.simple.small(href="#") Смотреть все фото (113)
+
+      // comments
+      .row.mt50.mb20.center
+        .t_prim.bold.big Отзывы о мероприятии
+      .row.ph10.pw20.mt10
+        .col.w1
+        .col.w10.t_dark-grey
+          .bold.fz120 Олеся Рожкова, 23 года, Москва
+          .bold.small.pt10 23/22/2016
+          p.small.pt10 Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+      // item
+      .row.ph10.pw20.mt10
+        .col.w1
+        .col.w10.t_dark-grey
+          .bold.fz120 Олеся Рожкова, 23 года, Москва
+          .bold.small.pt10 23/22/2016
+          p.small.pt10 Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+      // item
+      .row.ph10.pw20.mt10
+        .col.w1
+        .col.w10.t_dark-grey
+          .bold.fz120 Олеся Рожкова, 23 года, Москва
+          .bold.small.pt10 23/22/2016
+          p.small.pt10 Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+      // item
+      .row.ph10.pw20.mt10
+        .col.w1
+        .col.w10.t_dark-grey
+          .bold.fz120 Олеся Рожкова, 23 года, Москва
+          .bold.small.pt10 23/22/2016
+          p.small.pt10 Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+      // item
+      .row.ph10.pw20.mt10
+        .col.w1
+        .col.w10.t_dark-grey
+          .bold.fz120 Олеся Рожкова, 23 года, Москва
+          .bold.small.pt10 23/22/2016
+          p.small.pt10 Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+
+      .row.center.mt20
+        a.inlb.btn.simple.small(href="#") Смотреть все отзывы (16)
+
+      // testimnonials
+      .row.center.mt60
+        p.bold.big Оставить отзыв
+        .col.w1
+        .col.w10
+          .comments.comments-theme-dark
+            form#comment-form.comment-form(accept-charset='UTF-8', action='', method='post', name='comment-form')
+              .row
+                .col.w3.pr15
+                  .form-item
+                    input#edit-name.form-text.required(type='text', value='', placeholder="Ваше ФИО")
+                .col.w3.pr15
+                  .form-item
+                    input#edit-mail.form-text.required(type='text', value='', placeholder="Ваш email")
+                .col.w2.pr15
+                  .form-item
+                    input#edit-homepage.form-text(type='text', value='', placeholder="Возраст")
+                .col.w4.pr15
+                  .form-item
+                    input#edit-city.form-text(type='text', value='', placeholder="Город")
+
+                .col.w12
+                  #edit-comment-body.field-type-text-long.field-name-comment-body.field-widget-text-textarea.form-wrapper
+                    #comment-body-add-more-wrapper
+                      .form-item.form-type-textarea.form-item-comment-body-und-0-value.pr15
+                        .form-textarea-wrapper.resizable.textarea-processed.resizable-textarea
+                          textarea#edit-comment-body-und-0-value.text-full.block.w100.form-textarea.required(cols='60', name='comment_body[und][0][value]', rows='5', placeholder="Введите текст")
+                          .grippie
+                  #edit-actions--2.form-actions.form-wrapper
+                    input#edit-submit.form-submit.centrify(name='op', type='submit', value='Отправить отзыв')
+
+
+      footer.row.bg.bg-to.cover.bg-center.mt80(style="background-image: url('custom/img/slider-bg.png')")
+        .col.w5
+        .col.w7.mt100.mb70
+          .row
+            .fl
+              a.no-dec(href="#")
+                .payments.qiwi
+              a.no-dec(href="#")
+                .payments.webmoney
+              a.no-dec(href="#")
+                .payments.yandex
+              a.no-dec(href="#")
+                .payments.svaznoy
+              a.no-dec(href="#")
+                .payments.visa
+              a.no-dec(href="#")
+                .payments.mastercard
+            .fr
+              a.no-dec.mr10(href="#")
+                .socials.fb
+              a.no-dec.mr10(href="#")
+                .socials.ins
+              a.no-dec.mr10(href="#")
+                .socials.tw
+              a.no-dec.mr10(href="#")
+                .socials.vk
+              a.no-dec.mr10(href="#")
+                .socials.yt
+          .row.mt30
+            .col.w12
+              a(href="#").t_white
+                img.middle.mr10(src="custom/img/skype.png")
+                span Связаться с нами
