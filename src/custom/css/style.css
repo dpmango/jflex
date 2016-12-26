@@ -1,6 +1,6 @@
 .header-logo {
   display: block;
-  background-image: url('/custom/img/logo.png');
+  background-image: url('../../custom/img/logo.png');
 }
 
 /* custom components */
@@ -111,7 +111,7 @@
   display: inline-block;
   width: 35px;
   height: 35px;
-  background-image: url('/custom/img/socials.png');
+  background-image: url('../../custom/img/socials.png');
   background-repeat: no-repeat;
   cursor: pointer;
   -webkit-transition: opacity .4s ease-in-out;
@@ -145,7 +145,7 @@
   display: inline-block;
   width: 55px;
   height: 35px;
-  background-image: url('/custom/img/payments.png');
+  background-image: url('../../custom/img/payments.png');
   background-repeat: no-repeat;
   cursor: pointer;
   -webkit-transition: opacity .4s ease-in-out;
